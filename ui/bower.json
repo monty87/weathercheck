@@ -1,0 +1,40 @@
+{
+  "name": "weathergui",
+  "version": "0.0.0",
+  "authors": [
+    "monty"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.2.0",
+    "angular": "1.2.22",
+    "lodash": "2.4.1",
+    "angular-ui-router": "0.2.10",
+    "swagger-ui": "2.0.22",
+    "random-lodash-mixins": "0.0.4",
+    "momentjs": "2.8.3",
+    "angular-i18n": "1.2.22",
+    "angular-xeditable": "0.1.8",
+    "angular-bootstrap": "0.11.0",
+    "angular-leaflet-directive": "dab1c1e1b7d0ea3c8fab6d5d94096e5ed4d6aaed",
+    "jquery": "2.1.1",
+    "selectize": "0.11.2",
+    "autofill-directive": "2.0.0",    
+    "angular-translate": "~2.2.0",
+    "chai": "~1.9.2",
+    "mocha": "~1.21.4",
+    "angular-mocks": "~1.2.22",
+    "numeral": "~1.5.3"
+     
+    },
+  "resolutions": {
+    "angular": "1.2.22"
+  }
+}

@@ -1,0 +1,84 @@
+<form>
+<h2> Weather Forecast Details </h2>
+
+<h3> Current Day's Weather Details </h3>
+
+<dl class="row building-details">
+ 
+  <div class="col-sm-6">
+    <dt>Location</dt>
+    <dd>
+      <p>{{forecastDetails.location.name}}</p>
+    </dd>
+	
+	<dt>Region</dt>
+    <dd>
+      <p>{{forecastDetails.location.region}}</p>
+    </dd>
+    
+    <dt>Country</dt>
+    <dd>
+      <p>{{forecastDetails.location.country}}</p>
+    </dd>
+	</div>
+	<div class="col-sm-6">
+  	<dt>Last Updated At</dt>
+   <dd>
+      <p>{{forecastDetails.current.last_updated}}</p>
+    </dd>
+    
+   <dt>Condition</dt>
+   <dd>
+      <p>{{forecastDetails.current.condition.text}}</p>
+    </dd>
+    
+    <dt>Temperature in C</dt>
+   <dd>
+      <p>{{forecastDetails.current.temp_c}}</p>
+    </dd>
+    
+    <dt>Temperature in F</dt>
+   <dd>
+      <p>{{forecastDetails.current.temp_f}}</p>
+    </dd>
+
+  </div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+<div class="col-sm-3"></div>
+</dl>
+
+<dl class="col-sm-12">
+<h3> Forecast details for next 5 days </h3>
+  <table class="table table-fixed table-apartments">
+  <thead>
+    <tr>    
+      <th>Date</th>
+      <th>Condition</th>
+      <th>Max Temp C </th>
+      <th>Max Temp F </th>
+      <th>Min Temp C</th>
+      <th>Min Temp F</th>      
+    </tr>
+    
+  </thead>
+  <tbody>   
+    <tr ng-repeat="days in forecastdays ">
+      <td> {{days.date}}</td>
+      <td> {{days.day.condition.text}}</td>
+      <td> {{days.day.maxtemp_c}}</td>
+      <td> {{days.day.maxtemp_f}}</td>
+      <td> {{days.day.mintemp_c}}</td>
+      <td> {{days.day.mintemp_f}}</td> 
+     </tbody>
+</table>
+  
+  
+  
+  
+</dl>
+
+

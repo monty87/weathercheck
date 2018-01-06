@@ -1,0 +1,7 @@
+{
+    "directory": "app/components",
+    "storage": {
+        "cache": "../build/bower_cache",
+        "packages": "../build/bower_packages"
+    }
+}

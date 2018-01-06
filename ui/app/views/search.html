@@ -1,0 +1,37 @@
+<form class="form">
+  <div class="tool-group">
+    <div class="input-spinner" ng-class="{'spinner-active': searchOngoing}">
+      <input ng-model="searchTerm" ng-change="search(searchTerm)" 
+      class="form-control input-lg input-search" placeholder="Etsi">
+      <span class="spinner"></span>
+    </div>
+    <span class="input-group-btn">
+      <button type="button" class="btn btn-default btn-lg"
+        style="margin-left: -1px;"
+        translate="Clear"
+        ng-click="search('')">
+      </button>
+    </span>    
+  </div>
+</form>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="list-group search-results">
+      <a ng-repeat="result in results" 
+      ui-sref="search.results.detail({ lat :result.lat,lon: result.lon})" class="list-group-item" 
+      ng-class="{ 'active': $stateParams.lat === result.lat, $stateParams.lon :result.lon}">      
+       
+        <h4 class="list-group-item-heading">{{result.name}}</h4>
+        <p class="list-group-item-text">{{result.region}}</p>
+        <p class="list-group-item-text">{{result.country}}</p>       
+        <p class="list-group-item-text">{{result.lat}}</p>
+        <p class="list-group-item-text">{{result.lon}}</p>
+      </a>
+    </div>    
+  </div>
+  <div class="col-sm-8">
+    <div ui-view></div>
+   
+  </div>
+</div>

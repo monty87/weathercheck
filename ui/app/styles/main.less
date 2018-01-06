@@ -1,0 +1,139 @@
+@import "../components/bootstrap/less/bootstrap";
+@icon-font-path: "../components/bootstrap/dist/fonts/";
+@import "../components/selectize/dist/less/selectize.bootstrap3";
+
+// Remove smallest container size and create new largest
+@container-tablet:             ((940px + @grid-gutter-width));
+@container-sm:                 @container-tablet;
+
+@container-desktop:            ((1140px + @grid-gutter-width));
+@container-md:                 @container-desktop;
+
+@container-large-desktop:      ((1400px + @grid-gutter-width));
+@container-lg:                 @container-large-desktop;
+
+@screen-sm-min:              768px;
+@screen-md-min:              1200px;
+@screen-lg:                  1500px;
+@screen-xs-max:              767px;
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+@import "spinner";
+@import "angular";
+@import "swagger";
+
+html, body {
+    height: 100%;
+}
+
+body {
+  padding-top: 60px;
+}
+
+h3 {
+  .col-sm-6 { padding: 0; }
+  .alert {
+    margin-top: 10px;
+    font-size: @font-size-base;
+  }
+}
+
+.text-alert {
+  color: #844343;
+}
+
+p.no-wrapping {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Footer
+@footer-height: 40px;
+
+.wrap {
+  min-height: 100%;
+  & > .container {
+    padding-bottom: @footer-height;
+  }
+}
+
+.footer {
+  background: #eee;
+  position: relative;
+  clear: both;
+  height: @footer-height;
+  margin-top: -@footer-height;
+  .container {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+// Tables
+th.tools, td.tools {
+  .btn {
+    .btn-xs();
+  }
+  text-align: right;
+}
+
+.table-fixed {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th {
+  &.select { width: 30px; }
+  &.index { width: 80px; }
+  &.source { width: 70px; }
+  &.tools { width: 150px; }
+  &.number { width: 80px; }
+  &.status { width: 50px; }
+}
+
+
+tr.select {
+  background: #ddd;
+}
+
+tr.active {
+  background: #ccc;
+}
+
+.tool-group {
+  .input-group();
+  padding-bottom: 10px;
+  input {
+    border-radius: 6px 0 0 6px;
+  }
+  button {
+    height: 46px;
+  }
+
+}
+
+// Search
+.list-group-item {
+  h4 {
+    margin-bottom: 0;
+  }
+}
+
+
+dd p {
+  padding: 0;
+  margin: 0;
+}
+
+.building-details {
+  dd {
+    p {
+      min-height: @input-height-base;
+      padding: 6px 0;
+      vertical-align: middle;
+    }
+  }
+
+}

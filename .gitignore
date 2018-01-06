@@ -1,0 +1,86 @@
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+# java specific
+*.class
+
+# akka specific
+logs/*
+
+# sbt specific
+target/
+project/boot
+lib_managed/*
+project/build/target
+project/build/lib_managed
+project/build/src_managed
+project/plugins/lib_managed
+project/plugins/target
+project/plugins/src_managed
+project/plugins/project
+
+core/lib_managed
+core/target
+pubsub/lib_managed
+pubsub/target
+
+# eclipse specific
+.metadata
+jrebel.lic
+.settings
+.classpath
+.project
+bin
+
+.ensime*
+*.sublime-*
+.editorconfig
+.cache
+.lib
+
+
+# intellij
+*.eml
+*.iml
+*.ipr
+*.iws
+.*.sw?
+.idea
+
+# lucene
+index
+
+# h2
+server/db
+
+# JRebel
+licensing.info
+jrebel.jar
+rebel.xml
+
+# Node / Grunt
+.tmp/
+ui/node_modules/
+ui/app/admin/components/
+npm-debug.log
+dist/
+build/node_modules/
+build/bower_packages/
+build/node-v*-linux-x64/
+build/jq/
+
+# exports
+server/sql/export
+server/src/main/webapp
+
+ui/app/components
+ui/cache
+.editorconfig
+
+workbench.xmi
+.worksheet
+*.sc

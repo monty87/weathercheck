@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Mocha Test</title>
+    <link rel="stylesheet" href="../../components/mocha/mocha.css" type="text/css"/>
+</head>
+<body>
+    <div id="mocha"></div>
+
+    <!-- init -->
+    <script src="../../components/mocha/mocha.js"></script>
+    <script>
+    mocha.setup('bdd');
+    </script>
+
+    <script src="../../components/chai/chai.js"></script>
+    <script>
+    var expect = chai.expect;
+    </script>
+
+    <!-- deps -->
+    <script src="../../components/lodash/dist/lodash.js"></script>
+    <script src="../../components/angular/angular.js"></script>    
+
+    <!-- load mocks last because it adds window.module which breaks amd/node module shims -->
+    <script src="../../components/angular-mocks/angular-mocks.js"></script>
+
+    <!-- stuff under test -->
+    <script src="../../scripts/lib/index.js"></script>
+
+    <!-- the tests -->
+    <script src="parsers.js"></script>
+
+    <script>
+    if (window.mochaPhantomJS) mochaPhantomJS.run();
+    else mocha.run();
+    </script>
+</body>
+</html>
