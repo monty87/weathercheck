@@ -56,4 +56,16 @@ object WeatherServiceUrl {
 
   }
 }  
+
+
+object WeatherServiceApiKey {
+  def get = Env.env match {
+    case Prod => "4abb83b31b604be4a14194425180301"
+    case Test => "4abb83b31b604be4a14194425180301"
+    case Local => "4abb83b31b604be4a14194425180301"
+      case _ => "4abb83b31b604be4a14194425180301"
+
+  }
+} 
+
 }

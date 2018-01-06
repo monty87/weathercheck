@@ -2,13 +2,16 @@ package cloudator.weather.common
 
 import dispatch.Defaults.executor
 import cloudator.weather.LoggingSupport
+import cloudator.weather.Domain.WeatherServiceApiKey
 
 trait HttpClient extends LoggingSupport {
   import dispatch._, Defaults._
-
+  val apiKey=WeatherServiceApiKey.get
   def getListOfCities(queryTerm:String)(implicit endpoint: String) = {
     val now = System.currentTimeMillis
-    val request = url(endpoint+"/search.json").addQueryParameter("key", "4abb83b31b604be4a14194425180301").addQueryParameter("q", queryTerm)  
+    val request = url(endpoint+"/search.json")
+    .addQueryParameter("key", apiKey)
+    .addQueryParameter("q", queryTerm)  
     val call = Http(request)
     val response = call();
     val time = System.currentTimeMillis - now
@@ -16,10 +19,13 @@ trait HttpClient extends LoggingSupport {
     response
   }
   
-  
+  // as of now Forecast is being checked for next 5 days (today+ next 5 days)
    def getForecast(queryTerm:String)(implicit endpoint: String) = {
     val now = System.currentTimeMillis
-    val request = url(endpoint+"/forecast.json").addQueryParameter("key", "4abb83b31b604be4a14194425180301").addQueryParameter("q", queryTerm).addQueryParameter("days", "5")  
+    val request = url(endpoint+"/forecast.json")
+    .addQueryParameter("key", apiKey)
+    .addQueryParameter("q", queryTerm)
+    .addQueryParameter("days", "6")  
     val call = Http(request)
     val response = call();
     val time = System.currentTimeMillis - now
@@ -28,4 +34,3 @@ trait HttpClient extends LoggingSupport {
   }
    
 }
-
