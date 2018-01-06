@@ -32,4 +32,7 @@ Calls to /api are proxied to Scala backend on port 8080 by development server.
 
 ## Screenshots
 
-![alt text](searchLocation.PNG "Seearching for location and showing forecast details")
+![alt text](apis.PNG "Swagger document for APIs implementation")
+
+
+![alt text](searchLocation.PNG "Searching for location and showing forecast details")
