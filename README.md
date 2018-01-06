@@ -6,6 +6,10 @@ Project is split into two parts:
 - Scala backend, server/
 - AngularJS admin frontend, ui/
 
+So Please read both README.md files carefully. the other one can be found under ui/README.md file or [click here](ui/README.md)
+
+Also screen shots of functionalties from GUI perspective has been added in ui/README.md file
+
 
 ## Log file location
 
@@ -46,10 +50,13 @@ Interesting urls, these require both backend and frontend running
 
 	List of apis created 
 
-    get /api/weatherservice/checkForecastPeriodically :->  Checks Forecasts of list of cities periodically based on time input by user            
-    get /api/weatherservice/forecast/{lat}/{lon} :-> Retrieve forecast details of a city based on Latitude and Longitude provided by user    
-    get /api/weatherservice/forecastDetails :-> Retrieve forecast details for a list of cities
-    get /api/weatherservice/location :-> Retieve a list of matching cities
+get /api/weatherservice/checkForecastPeriodically :->  Checks Forecasts of list of cities periodically based on time input by user            
+
+get /api/weatherservice/forecast/{lat}/{lon} :-> Retrieve forecast details of a city based on Latitude and Longitude provided by user    
+
+get /api/weatherservice/forecastDetails :-> Retrieve forecast details for a list of cities
+
+get /api/weatherservice/location :-> Retieve a list of matching cities
 
 
 
