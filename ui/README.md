@@ -28,3 +28,8 @@ Calls to /api are proxied to Scala backend on port 8080 by development server.
 
 ## Build
 ``grunt build``
+
+
+## Screenshots
+
+![alt text](searchLocation.PNG "Seearching for location and showing forecast details")
